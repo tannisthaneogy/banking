@@ -48,7 +48,7 @@ export const signUp = async ({ password, ...userData }: SignUpParams) => {
     const dwollaCustomerUrl = await createDwollaCustomer({
       ...userData,
       type: 'personal'
-    })
+    });
 
     if(!dwollaCustomerUrl) throw new Error('Error creating Dwolla customer')
 
